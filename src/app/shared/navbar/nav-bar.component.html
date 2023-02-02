@@ -1,0 +1,23 @@
+<nav id="nav-wrapper">
+    <nav id="nav">
+        <div class="nav left">
+            <span class="gradient skew"><h1 class="logo un-skew"><a routerLink=""><img style="width: 45%;" src="/assets/images/logos/logo1.png"></a></h1></span>
+        </div>
+        <div class="nav right">
+            <a *ngIf="!isLogin" routerLink="register" class="nav-link"><span class="nav-link-span"><span
+                    class="u-nav">Register</span></span></a>
+            <a *ngIf="!isLogin" routerLink="login" class="nav-link"><span class="nav-link-span"><span
+                    class="u-nav">Login</span></span></a>
+            <a routerLink="page-song" class="nav-link"><span class="nav-link-span"><span
+                    class="u-nav">Song</span></span></a>
+            <a routerLink="page-category" class="nav-link"><span class="nav-link-span"><span
+                    class="u-nav">Category</span></span></a>
+            <a routerLink="page-album" class="nav-link"><span class="nav-link-span"><span
+                    class="u-nav">Album</span></span></a>
+            <a *ngIf="isLogin" routerLink="user-account" class="nav-link"><span class="nav-link-span"><span
+                    class="u-nav">{{name}} <img class="image" [src]=avatar width="60px" height="60px" style="border-radius: 50%"></span>
+            </span></a>
+
+        </div>
+    </nav>
+</nav>

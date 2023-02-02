@@ -1,0 +1,12 @@
+<div>
+    <input type="file" (change)="onFileChaged($event)"><br>
+    <!-- Khi nao thuc hien upload thi button nay moi hien, con co URL tuc upload thanh cong thi button nay an di-->
+    <mat-spinner *ngIf="checkUploadAvatar"></mat-spinner>
+    <div class="row">
+        <div class="column" *ngFor="let song of listIMG; let a = index">
+            <div class="card">
+                <img class="img" [src]="myMap.get(a)">
+            </div>
+        </div>
+    </div>
+</div>

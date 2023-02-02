@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin-top: 20px">
+            <mat-card style="margin: 50px 0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12"
+                             style="margin: 50px 0; border: 2px solid #BBBBBB; padding: 50px; border-radius: 5px">
+                            <div class="detail" style="text-align: center">
+                                <img class="img" [src]="albumDetail.album">
+                                <br>
+                                <b style="color: #f92672">Name Album: <i
+                                        style="color: #003bfe"> {{albumDetail.album.name}}</i>
+                                </b><br>
+                                <br>
+                                <b style="color: #f92672">Singer:
+                                    <i *ngFor="let si of albumDetail.album.songs.singerList; let a = index"
+                                       style="color: #003bfe"><i *ngIf="a>0">-&nbsp;</i>{{si.nameSinger}} </i>
+                                </b><br>
+                                <b style="color: #f92672" *ngFor="let band of albumDetail.album.songs.bandList; let a = index">Band:
+                                    <i style="color: #003bfe"><i *ngIf="a>0">-&nbsp;</i>{{band.nameBand}} </i>
+                                </b>
+                            </div>
+
+                            <div class="row justify-contents-around">
+                                <div class="col py-3 pl-3">
+                                </div>
+                                <div class="container-audio">
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                    <div class="colum1">
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <ngx-audio-player #player (trackEnded)="onEnded($event)" [autoPlay]="false"
+                                                      [displayPlaylist]="msaapDisplayPlayList"
+                                                      [tableHeader]="msaapTableHeader" [titleHeader]="msaapTitleHeader"
+                                                      [artistHeader]="msaapArtistHeader"
+                                                      [durationHeader]="msaapDurationHeader"
+                                                      [displayTitle]="msaapDisplayTitle"
+                                                      [displayVolumeControls]="msaapDisplayVolumeControls"
+                                                      [displayRepeatControls]="msaapDisplayRepeatControls"
+                                                      [disablePositionSlider]="msaapDisablePositionSlider"
+                                                      [displayArtist]="msaapDisplayArtist"
+                                                      [displayDuration]="msaapDisplayDuration" [expanded]="true"
+                                                      [pageSizeOptions]="pageSizeOptions" [playlist]="msaapPlaylist">
+                                    </ngx-audio-player>
+                                </div>
+                                <!--                                <marquee><mat-card-title style="color: #ff03cc">{{song.lyrics}}</mat-card-title> </marquee>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </mat-card>
+        </div>
+    </div>
+</div>

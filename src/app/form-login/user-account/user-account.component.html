@@ -1,0 +1,88 @@
+<div class="page-content page-container" id="page-content" style="margin-top: 100px;">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-xl-6 col-md-12">
+                <div class="card user-card-full">
+                    <div class="row m-l-0 m-r-0">
+                        <div class="col-sm-4 bg-c-lite-green user-profile">
+                            <div class="card-block text-center text-white">
+                                <div class="m-b-25">
+                                    <img src="{{avatar}}" class="img-radius" alt="User-Profile-Image">
+                                </div>
+                                <h6 class="f-w-600">{{roles}}</h6>
+                                <p>PROFILE</p>
+                                <button (click)="logOut()" mat-stroked-button color="primary"
+                                        class="mat-button-toggle-group btn-outline-danger">Logout-->
+                                    <mat-icon color="primary" matSuffix>logout</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-block">
+                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Name</p>
+                                        <h6 class="text-muted f-w-400">{{name}}</h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Role</p>
+                                        <h6 class="text-muted f-w-400">{{roles}}</h6>
+                                    </div>
+                                </div>
+                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Change Password</p>
+                                        <button routerLink="/change-password" mat-stroked-button color="primary"
+                                                class="mat-button-toggle-group btn-outline-danger">Change Password
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Change Avatar</p>
+                                        <button routerLink="/change-avatar" mat-stroked-button color="primary"
+                                                class="mat-button-toggle-group btn-outline-danger">Change Avatar
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Change Profile</p>
+                                        <button routerLink="/change-profile" mat-stroked-button color="primary"
+                                                class="mat-button-toggle-group btn-outline-danger">Change Profile
+                                        </button>
+                                    </div>
+                                    <div *ngIf="isCheckAdmin" class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Create Song</p>
+                                        <button routerLink="/create-song" mat-stroked-button color="primary"
+                                                class="mat-button-toggle-group btn-outline-danger">Create Song
+                                        </button>
+                                    </div>
+                                    <div *ngIf="isCheckAdmin" class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Create Category</p>
+                                        <button routerLink="/create-category" mat-stroked-button color="primary"
+                                                class="mat-button-toggle-group btn-outline-danger">Create Category
+                                        </button>
+                                    </div>
+                                    <div *ngIf="isCheckAdmin" class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Create Singer</p>
+                                        <button routerLink="/create-singer" mat-stroked-button color="primary"
+                                                class="mat-button-toggle-group btn-outline-danger">Create Singer
+                                        </button>
+                                    </div>
+                                    <div *ngIf="isCheckAdmin" class="col-sm-6">
+                                        <p class="m-b-10 f-w-600">Create Band</p>
+                                        <button routerLink="/create-band" mat-stroked-button color="primary"
+                                                class="mat-button-toggle-group btn-outline-danger">Create Band
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="isCheckAdmin">
+    <app-page-user></app-page-user>
+</div>
